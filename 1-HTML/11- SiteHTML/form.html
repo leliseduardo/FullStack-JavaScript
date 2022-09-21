@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Formulário</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="home.html"
+          ><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/SpaceX_logo_black.svg/2560px-SpaceX_logo_black.svg.png"
+            width="200"
+            height="100"
+        /></a>
+        <a href="chips.html"> | Naves</a>
+        <a href="form.html"> | Contrate-nos</a>
+        <hr />
+      </nav>
+    </header>
+    <section>
+      <section>
+        <div>
+          <h2>Contate-nos</h2>
+          <p>Mande-nos uma mensagem para contratar um serviço.</p>
+        </div>
+      </section>
+      <br />
+      <br />
+      <section>
+        <form action="">
+          <div>
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" />
+            <label for="email"> - Email: </label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <br />
+          <div>
+            <label for="nave">Nave: </label>
+            <select name="nave" id="nave">
+              <option value="Foguete">Foguete</option>
+              <option value="Ônibus Espacial">Ônibus Espacial</option>
+            </select>
+            <label for="servico"> | Tipo de serviço: </label>
+            <input type="search" list="pacotes" name="servico" id="servico" />
+            <datalist id="pacotes">
+              <option value="Exploração"></option>
+              <option value="Viagens"></option>
+              <option value="Fretes"></option>
+              <option value="Estudos"></option>
+            </datalist>
+          </div>
+          <br />
+          <div>
+            <input type="submit" value="Enviar mensagem" />
+          </div>
+        </form>
+      </section>
+    </section>
+  </body>
+</html>
+
+<-- Este é um comentario -->
