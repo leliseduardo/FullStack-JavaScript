@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  margin: 5px auto 5px auto;
+  width: 70%;
+  height: 100%;
+  background-color: #fffafa;
+}
+
+#first-publication {
+  padding-top: 20px;
+}
+
+#third-publication {
+  padding-bottom: 20px;
+}
+
+div {
+  margin: 30px auto 30px auto;
+  width: 80%;
+}
+
+.date-publication {
+  text-transform: uppercase;
+  color: #008080;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+#post-content {
+  font-family: "Open Sans", sans-serif;
+}

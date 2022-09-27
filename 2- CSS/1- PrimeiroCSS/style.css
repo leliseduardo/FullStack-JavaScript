@@ -1,0 +1,59 @@
+h1 {
+  color: blue;
+  font-size: 50px;
+}
+
+h4 {
+  color: red;
+}
+
+li {
+  color: green;
+}
+
+body {
+  background-color: blueviolet;
+}
+
+/* Para classes, utiliza-se o . */
+.text-white {
+  color: white;
+}
+
+/* Para id's, utiliza-se o # */
+#text-europa {
+  color: tomato;
+  font-size: 35px;
+}
+
+/* Seletor geral */
+/* representado por asterisco (*) */
+
+/* Seletor de herança - Seleciona a segunda tag que esteja dentro da primeira tag, em qualquer nível */
+li a {
+  color: orange;
+}
+
+/* Seletor de filho - Seleciona a segunda tag que seja filha da primeira */
+li a {
+  color: rosybrown;
+}
+
+/* Seletor de adjacente - Seleciona a segunda tag sempre que vier após a primeira tag */
+h1 + h4 {
+  color: turquoise;
+}
+
+/* Seletor de atributo - Seleciona a tag que tem um atributo específico */
+a[href="/recibo"] {
+  color: yellowgreen;
+}
+
+/* Seletores de tipo ou posição - Selecionam tags que estão em determinada posição ou têm determinado tipo */
+li :nth-last-of-type(2) {
+  color: yellow;
+}
+
+/* Para especificidade dos seletores, basicamente a ordem crescente é: tags, classes
+e id's. Porém, existem outros tipos de seletores no meio dessa ordem. É importante
+olhar a documentação caso seja necessário */
