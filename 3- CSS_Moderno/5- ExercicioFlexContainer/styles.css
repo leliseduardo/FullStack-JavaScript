@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items-container {
+  display: flex;
+  gap: 0px 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 30px 5px 30px;
+}
+
+.img-iconrock {
+  width: 40px;
+  height: auto;
+}
+
+.img-logo {
+  width: 200px;
+  height: auto;
+}
+
+.buttons-container {
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: transparent;
+  border-color: white;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.buttons-container:hover {
+  border-color: #ff0044;
+}
