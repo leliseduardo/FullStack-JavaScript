@@ -1,0 +1,158 @@
+/* General settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container settings */
+.container {
+  min-width: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header settings */
+.header {
+  width: 100%;
+  height: 90px;
+  background-color: #585656;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px 0 30px;
+}
+
+.title-buttons {
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.button {
+  width: auto;
+  height: auto;
+  padding: 10px;
+  border-color: transparent;
+  background-color: transparent;
+  color: white;
+  border-radius: 15px;
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+.button:hover {
+  border-color: red;
+}
+
+/* content settings */
+.main-content {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "title title title title"
+    "cntnt cntnt cntnt side"
+    "cntnt cntnt cntnt side"
+    "cntnt cntnt cntnt side"
+    "cntnt cntnt cntnt side"
+    "cntnt cntnt cntnt side";
+}
+
+.title-content {
+  grid-area: title;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.items-content {
+  width: 100%;
+  height: auto;
+  grid-area: cntnt;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-content: flex-start;
+  padding: 20px;
+}
+
+.item {
+  width: 350px;
+  height: 400px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+}
+
+.side-content {
+  grid-area: side;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #585656;
+}
+
+.side-items {
+  width: 300px;
+  height: 100px;
+  min-height: 200px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+}
+
+/* Footer settings */
+.footer {
+  width: 100%;
+  height: 60px;
+  background-color: black;
+}
+
+/* Images and text settings */
+
+.logoonebitcode {
+  width: 220px;
+  height: auto;
+}
+
+.image-content {
+  width: 330px;
+  height: auto;
+}
+
+.text-content {
+  width: 330px;
+  height: auto;
+}
+
+.side-images {
+  width: 280px;
+  height: auto;
+}
+
+.side-text {
+  text-transform: uppercase;
+  color: white;
+  font-size: 20px;
+}
