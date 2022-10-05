@@ -1,0 +1,27 @@
+.title {
+  font-size: 44px;
+  font-family: sans-serif;
+}
+
+.btn {
+  width: 90px;
+  padding: 10px 0;
+  background-color: #0e1146;
+  color: white;
+  display: block;
+  margin-top: 10px;
+}
+
+#cadastroText {
+  color: #ff4043;
+  font-size: 22px;
+  font-family: sans-serif;
+}
+
+.container p {
+  color: purple;
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

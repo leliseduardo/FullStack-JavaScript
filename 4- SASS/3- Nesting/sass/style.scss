@@ -1,0 +1,35 @@
+// .classe1 ul {
+//   background-color: red;
+// }
+
+// .classe1 li {
+//   background-color: blue;
+// }
+
+// .classe1 button {
+//   color: white;
+//   background-color: blue;
+// }
+// .classe1 button:hover{
+//   background-color: red;
+// }
+
+.classe1 {
+  ul {
+    background-color: blue;
+  }
+
+  li {
+    background-color: red;
+  }
+
+  button {
+    background-color: blue;
+    color: white;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+}

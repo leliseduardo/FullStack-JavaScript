@@ -1,0 +1,30 @@
+$color-title: #ff4043;
+$color-text: blue;
+
+@mixin text-style($color, $font-size, $font-family) {
+  color: $color;
+  font-size: $font-size;
+  font-family: $font-family;
+}
+
+.textTitle {
+  h1 {
+    @include text-style($color-title, 36px, Arial);
+  }
+
+  p {
+    @include text-style($color-text, 22px, sans-serif);
+  }
+}
+
+// .textTitle h1 {
+//   font-size: 36px;
+//   font-family: Arial;
+//   color: #ff4043;
+// }
+
+// .textTitle p {
+//   font: 22px;
+//   font-family: sans-serif;
+//   color: blue;
+// }

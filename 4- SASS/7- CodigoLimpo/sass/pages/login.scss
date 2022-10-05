@@ -1,0 +1,5 @@
+.container {
+  p {
+    @include text-style(purple, 25px, sans-serif);
+  }
+}
