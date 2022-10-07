@@ -1,0 +1,28 @@
+// Utilizando uma função
+// .title-container {
+//   color: mix(red, yellow, 50%);
+// }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Criando uma função
+@function title-color($background-color) {
+  @if (lightness($background-color) > 50) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+
+@mixin background-mixing($color-background) {
+  background-color: $color-background;
+  color: title-color($color-background);
+}
+
+.container {
+  height: 100vh;
+  @include background-mixing(black);
+}
