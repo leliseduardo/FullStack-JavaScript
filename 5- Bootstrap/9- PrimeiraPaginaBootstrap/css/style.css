@@ -26,6 +26,15 @@ img {
   flex-wrap: wrap;
 }
 
+.btn-enviar {
+  color: #ff0043;
+  border: 1px solid #ff0043;
+}
+.btn-enviar:hover {
+  background-color: #ff0043;
+  color: white;
+}
+
 @media (max-width: 450px) {
   .container1 {
     padding: 0;
