@@ -11,24 +11,34 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <!-- Link CSS -->
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- Favicon -->
+    <link rel="" href="./images/FAVICON-SPACEX.png" />
     <title>Rumo a marte - BitLelisX</title>
   </head>
   <body>
-    <div class="container">
-      <div class="formulario bg-dark">
-        <div class="img-cont">
+    <img src="./images/backgroundLp.png" alt="backgroundLp" class="img-body" />
+
+    <!-- Container -->
+    <div class="container container1 d-flex flex-column align-items-center">
+      <!-- Conteúdo: Logo e Formulários -->
+      <div class="content p-4 ps-2 d-flex flex-column align-items-start-center">
+        <!-- Imagem logo -->
+        <div class="img-cont text-center mb-1">
           <img
-            src="./img/logoOneBitDark.png"
+            src="./images/logoOneBitDark.png"
             alt="logoOneBitDark"
-            class="img img-fluid"
+            class="img"
           />
         </div>
 
+        <!-- Formulários -->
         <div class="div-forms">
           <form class="needs-validation" novalidate>
+            <!-- 1- Formulários de nome -->
             <div class="nome text-light ms-3">
-              <div class="text-light mt-4 pb-3">1- Qual o seu nome?</div>
+              <p class="text-light mt-3 mb-2">1- Qual o seu nome?</p>
               <div class="input-group pb-3">
                 <span class="input-group-text" id="basic-addon1"
                   >Primeiro nome</span
@@ -55,51 +65,49 @@
                 />
                 <div class="valid-feedback">Looks good!</div>
               </div>
+            </div>
 
-              <div class="genero text-light ms-1">
-                <div class="text-light mt-4 mb-2">2- Qual o seu gênero?</div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Masculino
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault2"
-                    checked
-                  />
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    Feminino
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault2"
-                    checked
-                  />
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    Prefiro não informar
-                  </label>
-                </div>
+            <!-- 2- Genero -->
+            <div class="genero text-light ms-3">
+              <p class="text-light mt-2 mb-2">2- Qual o seu gênero?</p>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Masculino
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Feminino
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Prefiro não informar
+                </label>
               </div>
             </div>
 
+            <!-- 3- Treinamentos -->
             <div class="treinamentos ms-3 text-light">
-              <div class="mt-4 mb-2">
-                3- Marque os treinamentos que você fez?
-              </div>
+              <p class="mt-2 mb-2">3- Marque os treinamentos que você fez?</p>
               <div class="form-check form-switch">
                 <input
                   class="form-check-input"
@@ -148,70 +156,87 @@
               </div>
             </div>
 
+            <!-- 4- Qualidades -->
             <div class="qualidades text-light ms-3">
-              <div>4- Quais você acha que são suas qualidades?</div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckDefault"
-                />
-                <label class="form-check-label" for="flexCheckDefault">
-                  Proativo
-                </label>
+              <p class="mt-2 mb-2">
+                4- Quais você acha que são suas qualidades?
+              </p>
+
+              <div class="caixas">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Proativo
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckChecked"
+                  />
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Resistente
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckChecked"
+                  />
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Não vomito fácil
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckChecked"
+                  />
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Não temo marcianos
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckChecked"
+                  />
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Já vi todos os star wars
+                  </label>
+                </div>
               </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckChecked"
-                />
-                <label class="form-check-label" for="flexCheckChecked">
-                  Resistente
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckChecked"
-                />
-                <label class="form-check-label" for="flexCheckChecked">
-                  Não vomito fácil
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckChecked"
-                />
-                <label class="form-check-label" for="flexCheckChecked">
-                  Não temo marcianos
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheckChecked"
-                />
-                <label class="form-check-label" for="flexCheckChecked">
-                  Já vi todos os star wars
-                </label>
-              </div>
+            </div>
+
+            <!-- Botão -->
+            <div class="botao ms-3 text-center">
+              <button type="button" class="btn btn-outline-danger btn-lg mt-2">
+                Enviar
+              </button>
             </div>
           </form>
         </div>
       </div>
 
-      <div class="direitos text-light">
-        Criado por Eduardo Lelis. Todos os direitos reservados.
+      <!-- Direitos autorais -->
+      <div class="direitos text-light mt-5 mb-4 text-center">
+        Criado por Eduardo Lelis © LelisBitCode todos os direitos reservados -
+        2022
       </div>
     </div>
 
