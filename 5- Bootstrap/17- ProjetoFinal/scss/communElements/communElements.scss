@@ -56,6 +56,14 @@
   }
 }
 
+@media (max-width: 449px) {
+  .downloadDesc {
+    button {
+      margin: 10px 0;
+    }
+  }
+}
+
 // Media query
 @media (max-width: 405px) {
   .logoPc {
