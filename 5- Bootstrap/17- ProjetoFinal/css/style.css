@@ -35,6 +35,26 @@
   border: 2px solid white;
 }
 
+.downloadDesc {
+  background-color: black;
+  height: 85vh;
+  padding: 240px;
+}
+.downloadDesc button {
+  border: 2px solid white;
+  margin-right: 10px;
+}
+
+.emailObc {
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+.emailObc:hover {
+  border-bottom: 1px solid #b9b9b9;
+  color: #b9b9b9;
+}
+
 .footer {
   background-color: black;
   height: 15vh;
@@ -195,25 +215,6 @@
 
 .carousselText {
   background-color: black;
-}
-
-.downloadDesc {
-  background-color: black;
-  height: 85vh;
-  padding: 240px;
-}
-.downloadDesc a {
-  text-decoration: none;
-  color: white;
-  border-bottom: 1px solid white;
-}
-.downloadDesc a:hover {
-  border-bottom: 1px solid #b9b9b9;
-  color: #b9b9b9;
-}
-.downloadDesc button {
-  border: 2px solid white;
-  margin-right: 10px;
 }
 
 @media (max-width: 768px) {
