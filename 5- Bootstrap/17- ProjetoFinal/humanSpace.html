@@ -12,12 +12,12 @@
       crossorigin="anonymous"
     />
     <!-- Lib text CSS -->
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Link CSS -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
-    <title>OnebitX - Home</title>
+    <title>Human Space</title>
   </head>
   <body>
     <!-- Oitavo container - Header -->
@@ -26,7 +26,7 @@
         <header class="header">
           <nav class="navbar navbar-expand-lg navbar-dark bg-transparent pt-4">
             <div class="container-fluid">
-              <a href="/index.html">
+              <a href="index.html">
                 <img
                   src="./images/logo-obc-2021-darkbg.png"
                   alt="logo-obc-2021-darkbg"
@@ -50,7 +50,7 @@
                     <a
                       class="nav-link active"
                       aria-current="page"
-                      href="/falcon9.html"
+                      href="falcon9.html"
                       id="navItem"
                       >FALCON 9</a
                     >
@@ -58,7 +58,7 @@
                   <li class="nav-item">
                     <a
                       class="nav-link active"
-                      href="/humamSpace.html"
+                      href="humamSpace.html"
                       id="navItem"
                       >HUMAN SPACE FLIGHT</a
                     >
@@ -80,7 +80,7 @@
         <p>FAZENDO A VIDA MULTIPLANETÁRIA</p>
 
         <img
-          src="/imagens/humanFlight/arrowDown.gif"
+          src="images/humanFlight/arrowDown.gif"
           alt="arrowDown"
           class="arrowDown"
         />
@@ -104,7 +104,7 @@
         data-aos-duration="1500"
       >
         <p>MISSAO</p>
-        <h2 class="titleSection">ORBITA DA TERRA</h2>
+        <h2 class="h2 titleSection">ORBITA DA TERRA</h2>
         <p class="subTitle">EXPERIMENTE O PLANETA AZUL A 300KM DE ALTURA</p>
         <button type="button" class="btn btn-outline-light p-3 px-5">
           EXPLORAR
@@ -112,15 +112,54 @@
       </div>
     </div>
 
-    <!-- Terceiro container -->
-    <div class="container-fluid container00 container03">
-      <div class="container titlePadding">
-        <p class="h5" id="launchComing">MISSÃO CONCLUÍDA</p>
+    <!-- Décimo container -->
+    <div class="container-fluid container00 container10">
+      <div
+        class="containerLeftContent"
+        data-aos="fade-up"
+        data-aos-duration="1600"
+      >
+        <p>MISSAO</p>
+        <h2 class="titleSection">ESTAÇÃO ESPACIAL</h2>
+        <p class="subTitle">
+          TRANSPORTANTO HUMANOS PARA O LABORATÓRIO VOADOR NO CÉU
+        </p>
+        <button type="button" class="btn btn-outline-light p-3 px-5">
+          EXPLORAR
+        </button>
+      </div>
+    </div>
 
-        <p class="h1 shortTitle">DRAGON RETORNOU PARA A TERRA</p>
+    <!-- Décimo primeiro container -->
+    <div class="container-fluid container00 container11">
+      <div
+        class="containerRightContent"
+        data-aos="zoom-in-up"
+        data-aos-duration="600"
+      >
+        <p>MISSAO</p>
+        <h2 class="titleSection">LUA</h2>
+        <p class="subTitle">RETORNANDO HUMANOS PARA A NOSSA LUA VIZINHA</p>
+        <button type="button" class="btn btn-outline-light p-3 px-5">
+          EXPLORAR
+        </button>
+      </div>
+    </div>
 
-        <button type="button" class="btn btn-outline-light mt-5" id="button">
-          SAIBA MAIS
+    <!-- Décimo segundo container -->
+    <div class="container-fluid container00 container12">
+      <div
+        class="containerLeftContent"
+        data-aos="flip-right"
+        data-aos-duration="1500"
+      >
+        <p>MISSAO</p>
+        <h2 class="titleSection">MARTE E ALÉM</h2>
+        <p class="subTitle">
+          O CAMINHO PARA TORNAR A HUMANIDADE MULTIPLANETÁRIA
+        </p>
+        <button type="button" class="btn btn-outline-light p-3 px-5">
+          EXPLORAR
         </button>
       </div>
     </div>
@@ -185,5 +224,9 @@
     ></script>
 
     <!-- Lib text JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
