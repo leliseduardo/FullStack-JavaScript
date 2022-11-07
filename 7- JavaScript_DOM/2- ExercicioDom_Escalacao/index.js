@@ -10,6 +10,7 @@ function addEscalacao() {
     document.getElementById("numero").value != ""
   ) {
     const ul = document.createElement("ul");
+    ul.id = "N" + document.getElementById("numero").value;
     if (document.getElementById("aviso"))
       inputsJogadores.removeChild(document.getElementById("aviso"));
 
@@ -24,7 +25,6 @@ function addEscalacao() {
 
     const numeroLi = document.createElement("li");
     numeroLi.innerText = "Número: " + document.getElementById("numero").value;
-    numeroLi.id = "numeroLi";
     ul.appendChild(numeroLi);
 
     listaJogadores.appendChild(ul);
@@ -38,4 +38,10 @@ function addEscalacao() {
   }
 }
 
-function removerJogador() {}
+function removerJogador() {
+  const number = document.getElementById("numeroRemove").value;
+  const jogador = document.getElementById("N" + number);
+
+  document.getElementById("jogadores-list").removeChild(jogador);
+  document.getElementById("numeroRemove").value = "";
+}
