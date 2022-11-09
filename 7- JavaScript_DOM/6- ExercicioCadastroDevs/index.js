@@ -1,4 +1,5 @@
 const sectionTech = document.getElementById("formulario");
+let cont = 1;
 
 // Botão para adicionar formulário de tecnologia
 const buttonAddTech = document.getElementById("add-tech");
@@ -22,30 +23,34 @@ buttonAddTech.addEventListener("click", function (ev) {
 
   const labelPrimeira = document.createElement("label");
   labelPrimeira.innerText = " 0-2 anos: ";
-  labelPrimeira.setAttribute("for", "tempo1");
+  labelPrimeira.setAttribute("for", "tempo" + cont + ".1");
   const inputPrimeira = document.createElement("input");
   inputPrimeira.type = "radio";
-  inputPrimeira.name = "tempo";
-  inputPrimeira.id = "tempo1";
+  inputPrimeira.name = "tempo" + cont + ".1";
+  inputPrimeira.id = "tempo" + cont + ".1";
   inputPrimeira.value = "0-2 anos";
+  inputPrimeira.className = "inputTempo";
 
   const labelSegunda = document.createElement("label");
   labelSegunda.innerText = " 3-4 anos: ";
-  labelSegunda.setAttribute("for", "tempo2");
+  labelSegunda.setAttribute("for", "tempo" + cont + ".2");
   const inputSegunda = document.createElement("input");
   inputSegunda.type = "radio";
-  inputSegunda.name = "tempo";
-  inputSegunda.id = "tempo2";
+  inputSegunda.name = "tempo" + +cont + ".2";
+  inputSegunda.id = "tempo" + +cont + ".2";
   inputSegunda.value = "3-4 anos";
+  inputSegunda.className = "inputTempo";
 
   const labelTerceira = document.createElement("label");
   labelTerceira.innerText = " 5+ anos: ";
-  labelTerceira.setAttribute("for", "tempo3");
+  labelTerceira.setAttribute("for", "tempo" + cont + ".3");
   const inputTerceira = document.createElement("input");
   inputTerceira.type = "radio";
-  inputTerceira.name = "tempo";
-  inputTerceira.id = "tempo3";
+  inputTerceira.name = "tempo" + cont + ".3";
+  inputTerceira.id = "tempo" + cont + ".3";
   inputTerceira.value = "5+ anos";
+  inputTerceira.className = "inputTempo";
+  cont++;
 
   // Adicionando os elementos
   div.appendChild(document.createElement("br"));
@@ -95,7 +100,7 @@ salvar.addEventListener("click", function (ev) {
 
   let tempo = "";
   document
-    .querySelectorAll("input[name='tempo']:checked")
+    .querySelectorAll("input[type='radio']:checked")
     .forEach(function (item) {
       tempo += " " + item.value;
     });
