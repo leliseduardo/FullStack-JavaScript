@@ -1,0 +1,158 @@
+/* All page */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #212529;
+  --border-color: #666;
+  --font-color: #f1f5f9;
+  --primary-color: #4dff91;
+  --error-color: #ff0043;
+}
+
+/* Container */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+}
+
+/* Content */
+.content {
+  width: 600px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--font-color);
+}
+
+.header-item {
+  margin: 10px;
+}
+
+.header-btn {
+  width: 100px;
+  height: 40px;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  border: 3px solid var(--font-color);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.header-btn:hover {
+  background-color: var(--font-color);
+  color: var(--bg-color);
+}
+
+/* Inputs expressions */
+.expressions {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#input-expressions {
+  width: 100%;
+  height: 60px;
+  margin: 10px;
+  background-color: var(--bg-color);
+  border: 3px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--font-color);
+  font-size: 25px;
+  text-align: right;
+  padding: 10px;
+}
+
+/* Buttons math */
+.math-buttons {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.row {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.math-btn {
+  width: 100%;
+  margin: 5px 10px 5px 10px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.math-btn:hover {
+  opacity: 0.5;
+}
+
+/* Results - Footer */
+.results {
+  width: 100%;
+  height: 80px;
+}
+
+.results-inputs {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#input-results {
+  width: 100%;
+  height: 60px;
+  background-color: var(--bg-color);
+  border: 3px solid var(--border-color);
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+  color: var(--font-color);
+  font-size: 25px;
+  text-align: right;
+  padding: 10px;
+}
+
+#copy-btn {
+  width: 70px;
+  height: 86px;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border: 3px solid var(--border-color);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: 0.5s;
+}
+
+#copy-btn:hover {
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+}
