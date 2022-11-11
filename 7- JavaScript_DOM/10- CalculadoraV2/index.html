@@ -9,8 +9,58 @@
     <script src="./index.js" defer></script>
   </head>
   <body>
-    <div class="containe">
-      <div id="cabecalho"></div>
+    <!-- Container -->
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1 class="header-title">Calculadora</h1>
+        <button class="header-btn">Tema</button>
+      </div>
+
+      <!-- Input expressions -->
+      <div class="expressions">
+        <input type="text" id="input-expressions" />
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <div class="row" id="row1">
+          <button class="btn-content" id="btnC" value="C">C</button>
+          <button class="btn-content" id="btn(" value="(">(</button>
+          <button class="btn-content" id="btn)" value=")">)</button>
+          <button class="btn-content" id="btn/" value="/">/</button>
+        </div>
+        <div class="row" id="row2">
+          <button class="btn-content" id="btn7" value="7">7</button>
+          <button class="btn-content" id="btn8" value="8">8</button>
+          <button class="btn-content" id="btn9" value="9">9</button>
+          <button class="btn-content" id="btn*" value="*">*</button>
+        </div>
+        <div class="row" id="row3">
+          <button class="btn-content" id="btn4" value="4">4</button>
+          <button class="btn-content" id="btn5" value="5">5</button>
+          <button class="btn-content" id="btn6" value="6">6</button>
+          <button class="btn-content" id="btn-" value="-">-</button>
+        </div>
+        <div class="row" id="row4">
+          <button class="btn-content" id="btn1" value="1">1</button>
+          <button class="btn-content" id="btn2" value="2">2</button>
+          <button class="btn-content" id="btn3" value="3">3</button>
+          <button class="btn-content" id="btn+" value="+">+</button>
+        </div>
+        <div class="row" id="row5">
+          <button class="btn-content" id="btn0" value="0">0</button>
+          <button class="btn-content" id="btn." value=".">.</button>
+          <button class="btn-content" id="btnMod" value="%">Mod</button>
+          <button class="btn-content" id="btn=" value="=">=</button>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="results">
+        <button id="copy-btn">Copy</button>
+        <input type="text" id="input-results" disabled="true" />
+      </div>
     </div>
   </body>
 </html>
