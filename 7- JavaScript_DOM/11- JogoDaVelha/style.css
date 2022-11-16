@@ -151,6 +151,8 @@
   width: 200px;
   height: auto;
   background-color: var(--bg-color);
+  color: transparent;
+  font-size: 50px;
   border: solid 5px var(--primary-color);
   transition: 0.8s;
 }
@@ -163,6 +165,7 @@
 #btn1 {
   border-top: none;
   border-left: none;
+  border-top-left-radius: 10px;
 }
 
 #btn2 {
@@ -172,6 +175,7 @@
 #btn3 {
   border-top: none;
   border-right: none;
+  border-top-right-radius: 10px;
 }
 
 #btn4 {
@@ -185,6 +189,7 @@
 #btn7 {
   border-bottom: none;
   border-left: none;
+  border-bottom-left-radius: 10px;
 }
 
 #btn8 {
@@ -194,4 +199,5 @@
 #btn9 {
   border-bottom: none;
   border-right: none;
+  border-bottom-right-radius: 10px;
 }

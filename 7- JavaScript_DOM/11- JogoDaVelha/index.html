@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./index.js"></script>
     <title>Jogo da velha</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <!-- Container -->
@@ -22,7 +22,7 @@
         <!-- Inputs do jogo -->
         <div class="inputs-game">
           <div class="players-name">
-            <label for="name" id="label-name">Nome X:</label>
+            <label for="name" id="label-name">Nome:</label>
             <input type="text" name="name" id="name" />
             <button id="setup-btn">Salvar</button>
           </div>
@@ -41,27 +41,27 @@
           </div>
 
           <div class="theme">
-            <button id="btn-theme">Tema claro</button>
+            <button id="btn-theme" data-theme="dark">Tema claro</button>
           </div>
         </div>
 
         <!-- Status jogo -->
         <div class="status">
-          <h1 id="status-game">Iniciar jogo</h1>
+          <h1 id="status-game">Digite o nome de X</h1>
         </div>
 
         <!-- Área do jogo -->
         <div class="game-area">
           <div class="btn-area">
-            <button class="btn-game" id="btn1">-</button>
-            <button class="btn-game" id="btn2">-</button>
-            <button class="btn-game" id="btn3">-</button>
-            <button class="btn-game" id="btn4">-</button>
-            <button class="btn-game" id="btn5">-</button>
-            <button class="btn-game" id="btn6">-</button>
-            <button class="btn-game" id="btn7">-</button>
-            <button class="btn-game" id="btn8">-</button>
-            <button class="btn-game" id="btn9">-</button>
+            <button class="btn-game" id="btn1">1</button>
+            <button class="btn-game" id="btn2">2</button>
+            <button class="btn-game" id="btn3">3</button>
+            <button class="btn-game" id="btn4">4</button>
+            <button class="btn-game" id="btn5">5</button>
+            <button class="btn-game" id="btn6">6</button>
+            <button class="btn-game" id="btn7">7</button>
+            <button class="btn-game" id="btn8">8</button>
+            <button class="btn-game" id="btn9">9</button>
           </div>
         </div>
       </main>
