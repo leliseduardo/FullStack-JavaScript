@@ -107,6 +107,7 @@
   background-color: var(--primary-color);
   border-radius: 10px;
   transition: 0.5s;
+  font-size: 30px;
 }
 
 .math-btn:hover {
@@ -155,4 +156,14 @@
 #copy-btn:hover {
   border: 3px solid var(--primary-color);
   color: var(--primary-color);
+}
+
+.success {
+  background-color: var(--primary-color) !important;
+  color: var(--bg-color) !important;
+}
+
+.error {
+  background-color: var(--error-color) !important;
+  columns: var(--font-color) !important;
 }
