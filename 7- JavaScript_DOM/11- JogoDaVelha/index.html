@@ -16,28 +16,43 @@
         <!-- Cabeçalho -->
         <div class="header">
           <h1 class="header-title">Jogo da velha</h1>
+          <hr id="line-title" />
         </div>
 
         <!-- Inputs do jogo -->
         <div class="inputs-game">
           <div class="players-name">
-            <label for="name" id="label-name">Nome X:</label><br />
+            <label for="name" id="label-name">Nome X:</label>
             <input type="text" name="name" id="name" />
-
             <button id="setup-btn">Salvar</button>
-
-            <p>Jogador X:</p>
-            <p id="jogador X">-</p>
-            <p>Jogador O:</p>
-            <p id="Jogador O">-</p>
           </div>
 
-          <div class="status-game">
-            <h1>Iniciar jogo</h1>
+          <div class="names-players">
+            <ul class="list-players">
+              <li>
+                Jogador X:
+                <span id="jogador-x">-</span>
+              </li>
+              <li>
+                Jogador O:
+                <span id="jogador-o">-</span>
+              </li>
+            </ul>
           </div>
 
-          <!-- Área do jogo -->
-          <div class="game-area">
+          <div class="theme">
+            <button id="btn-theme">Tema claro</button>
+          </div>
+        </div>
+
+        <!-- Status jogo -->
+        <div class="status">
+          <h1 id="status-game">Iniciar jogo</h1>
+        </div>
+
+        <!-- Área do jogo -->
+        <div class="game-area">
+          <div class="btn-area">
             <button class="btn-game" id="btn1">-</button>
             <button class="btn-game" id="btn2">-</button>
             <button class="btn-game" id="btn3">-</button>
