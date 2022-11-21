@@ -15,7 +15,7 @@ function mediaAritmetica(...numbers) {
   return soma / numbers.length;
 }
 
-console.log(mediaAritmetica(...seqNumbers));
+console.log(`Média aritmética: ${mediaAritmetica(...seqNumbers)}`);
 // O "..." passa um elemento por vez à função
 
 // Calculando a média ponderada
@@ -40,4 +40,26 @@ function mediaPonderada(...numbers) {
   return (dividendo / divisor).toFixed(2);
 }
 
-console.log(mediaPonderada(...seqNumbers));
+console.log(`Média ponderada: ${mediaPonderada(...seqNumbers)}`);
+
+// Calculando a mediana
+function mediana(...numbers) {
+  numbers.sort((a, b) => {
+    if (a > b) return 1;
+    if (a < b) return -1;
+    return 0;
+  });
+
+  console.log(`Sequência ordenada: ${numbers}`);
+
+  if (numbers.length % 2 === 1) return numbers[Math.floor(numbers.length / 2)];
+  if (numbers.length % 2 === 0) {
+    let indice = numbers.length / 2;
+    let num1 = numbers[indice];
+    let num2 = numbers[indice - 1];
+    let mediana = (num1 + num2) / 2;
+    return mediana;
+  }
+}
+
+console.log(`Mediana: ${mediana(...seqNumbers)}`);
