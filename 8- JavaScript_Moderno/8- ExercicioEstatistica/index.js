@@ -1,7 +1,8 @@
 // Criando um array aleatório de número de 0 a 10
-let seqNumbers = [1, 1, 1, 5, 6, 2, 2, 3, 3, 4];
+// let seqNumbers = [1, 1, 1, 5, 6, 2, 2, 3, 3, 4];
+let seqNumbers = [];
 
-// for (let i = 0; i < 10; i++) seqNumbers[i] = Math.floor(Math.random() * 10);
+for (let i = 0; i < 10; i++) seqNumbers[i] = Math.floor(Math.random() * 10);
 
 console.log(`Sequência de números: ${seqNumbers}`);
 
@@ -64,25 +65,29 @@ function mediana(...numbers) {
 
 console.log(`Mediana: ${mediana(...seqNumbers)}`);
 
+// Calculando a moda - Fixando exercício
+const mode = (...numbers) => {
+  const quant = numbers.map((num) => [
+    num,
+    numbers.filter((n) => num === n).length,
+  ]);
+  quant.sort((a, b) => b[1] - a[1]);
+  return quant[0][0];
+};
+
+console.log(`Moda: ${mode(...seqNumbers)}`);
+
 // Calculando a moda
 function moda(...numbers) {
-  let freqs = [];
-  let maiorFreq = 0;
-  let numeroModa = 0;
+  // [ [n, qtd], [n, qtd], [n, qtd]]
+  let freqs = numbers.map((number) => [
+    number,
+    numbers.filter((num) => num === number).length,
+  ]);
 
-  for (let i = 0; i < numbers.length; i++) freqs[i] = 0;
+  let numModa = freqs.sort((a, b) => b[1] - a[1]);
 
-  numbers.forEach((number, indiceAtual) => {
-    numbers.forEach((item) => {
-      if (number === item) freqs[indiceAtual] += 1;
-    });
-  });
-
-  // Função que procura em freqs o maior valor
-
-  const moda = [numeroModa, maiorFreq];
-
-  return moda;
+  return numModa[0][0];
 }
 
 console.log(`Moda: ${moda(...seqNumbers)}`);
