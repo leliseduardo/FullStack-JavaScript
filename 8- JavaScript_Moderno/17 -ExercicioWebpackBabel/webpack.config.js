@@ -13,10 +13,10 @@ module.exports = {
     index: "./src/index.js",
     hello: "./src/hello.js",
   },
+  mode: "production",
   output: {
     filename: "[name].min.js",
   },
-  mode: "production",
   module: {
     rules: [
       {
