@@ -11,7 +11,7 @@ module.exports = {
   entry: {
     index: "./src/index.js",
   },
-  mode: "production",
+  mode: "development",
   output: {
     filename: "[name].min.js",
   },

@@ -4,7 +4,7 @@ module.exports = {
   entry: {
     index: "./src/index.js",
   },
-
+  mode: "development",
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
@@ -22,8 +22,10 @@ module.exports = {
   watch: true,
 
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    watchContentBase: true,
-    liveReload: true,
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    compress: true,
+    port: 8080,
   },
 };

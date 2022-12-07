@@ -1,5 +1,7 @@
+import "core-js";
+import "regenerator-runtime/runtime";
+
 function addContact() {
-  alert("Ola");
   const contactSection = document.getElementById("contacts-list");
 
   const h3 = document.createElement("h3");
@@ -47,5 +49,3 @@ function removeContact() {
   contactSection.removeChild(titles[titles.length - 1]);
   contactSection.removeChild(contacts[contacts.length - 1]);
 }
-
-alert("Ola");
