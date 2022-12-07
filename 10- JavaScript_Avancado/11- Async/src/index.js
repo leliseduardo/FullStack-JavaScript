@@ -21,9 +21,21 @@ async function fire(x, y, z) {
   return [x, y, z];
 }
 
+function loadAmmo() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Arma carregada!");
+    }, 2000);
+  });
+}
+
 async function moveAndFire(x, y, z) {
   try {
-    const ajustedPosition = await adjustPosition(x, y, z);
+    const position = adjustPosition(x, y, z);
+    const loadedAmmo = loadAmmo();
+    let promiseResult = await Promise.all([position, loadedAmmo]);
+    console.log(promiseResult[1]);
+    let ajustedPosition = promiseResult[0];
     console.log(
       `Arma ajustada para as coordenadas (${ajustedPosition[0]}, ${ajustedPosition[1]}, ${ajustedPosition[2]})`
     );
