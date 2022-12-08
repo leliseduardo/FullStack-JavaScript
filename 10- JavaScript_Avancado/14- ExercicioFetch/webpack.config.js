@@ -3,8 +3,8 @@ const path = require("path");
 module.exports = {
   entry: {
     index: "./src/index.js",
-    neo: "./src/neo.js",
-    neoService: "./src/neo_service.js",
+    sentryObject: "./src/sentry_object.js",
+    sentryService: "./src/sentry_service.js",
   },
   mode: "development",
   output: {
