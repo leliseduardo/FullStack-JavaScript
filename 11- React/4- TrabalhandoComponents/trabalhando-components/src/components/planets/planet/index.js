@@ -16,7 +16,7 @@ import DescriptionWithLink from "../../shared/description-with-link";
 // Aula sobre renderização condicional
 const Planet = (props) => {
   let names = ["a", "b", "c", "d"];
-  let satellites = names.map((n, i) => <li key={i}>Satélite {n}</li>);
+  // let satellites = names.map((n, i) => <li key={i}>Satélite {n}</li>);
   // satellites será um array formado pelo processamento de cada elemento.
   // Nesse caso, será formado por elementos "li" com o nome de cada elemento
 
@@ -34,7 +34,12 @@ const Planet = (props) => {
       {title}
       <DescriptionWithLink description={props.description} link={props.link} />
       <h3>Satélites</h3>
-      <ul>{satellites}</ul>
+      {/* <ul>{satellites}</ul> */}
+      <ul>
+        {names.map((n, i) => (
+          <li key={i}>Satélite {n}</li>
+        ))}
+      </ul>
       <GrayIMG img_url={props.img_url} grayScale={props.grayScale} />
     </div>
   );
