@@ -1,10 +1,15 @@
 import React, { Fragment } from "react";
 import Planet from "./planet";
 
-function Planets() {
+const showMessage = () => {
+  console.log("Hello Event!");
+};
+
+const Planets = () => {
   return (
     <Fragment>
       <h3>Planet List</h3>
+      <button onClick={showMessage}>Message</button>
       <hr />
       <Planet
         name="Mercúrio"
@@ -20,6 +25,6 @@ function Planets() {
       />
     </Fragment>
   );
-}
+};
 
 export default Planets;

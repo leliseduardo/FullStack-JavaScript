@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-function DescriptionWithLink(props) {
+const DescriptionWithLink = (props) => {
   return (
     <Fragment>
       <p>{props.description}</p>
@@ -11,6 +11,6 @@ function DescriptionWithLink(props) {
       </p>
     </Fragment>
   );
-}
+};
 
 export default DescriptionWithLink;
