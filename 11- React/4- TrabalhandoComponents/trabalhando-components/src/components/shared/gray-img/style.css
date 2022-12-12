@@ -1,8 +1,8 @@
 .gray-scale {
-  width: 300px;
+  width: 200px;
   filter: grayscale(100%);
 }
 
 .color-scale {
-  width: 400px;
+  width: 300px;
 }
