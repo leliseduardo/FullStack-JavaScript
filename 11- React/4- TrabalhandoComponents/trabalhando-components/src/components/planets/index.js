@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Planet from "./planet";
 
 // const showMessage = () => {
@@ -139,18 +139,22 @@ import Planet from "./planet";
 
 // export default Planets;
 
+async function getPlanets() {
+  let response = await fetch("http://localhost:3000/api/planets.json");
+  let data = await response.json();
+  return data;
+}
+
 const Planets = () => {
-  const [planets, setPlanets] = useState([
-    {
-      id: "mars",
-      name: "Mars",
-      description:
-        "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war and is often referred to as the 'Red Planet'.",
-      img_url:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/220px-OSIRIS_Mars_true_color.jpg",
-      link: "https://en.wikipedia.org/wiki/Mars",
-    },
-  ]);
+  const [planets, setPlanets] = useState([]);
+
+  useEffect(() => {
+    getPlanets().then((data) => {
+      setPlanets(data["planets"]);
+    });
+  }, []); // As chaves servem para indicar que o useEffect só deve
+  // renderizar no inicio, na montagem. Se quiser re-renderizar sempre
+  // não deve-se passar este parâmetro vazio
 
   const removeLast = () => {
     let new_planets = [...planets];
