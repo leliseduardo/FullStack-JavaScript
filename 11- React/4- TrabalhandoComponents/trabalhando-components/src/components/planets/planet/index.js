@@ -46,23 +46,58 @@ import DescriptionWithLink from "../../shared/description-with-link";
 // };
 
 // Criando classe com estado
-const Planet = (props) => {
-  let title;
-  if (props.title_with_underline)
-    title = (
-      <h1>
-        <u>{props.name}</u>
-      </h1>
+// const Planet = (props) => {
+//   let title;
+//   if (props.title_with_underline)
+//     title = (
+//       <h1>
+//         <u>{props.name}</u>
+//       </h1>
+//     );
+//   else title = <h1>{props.name}</h1>;
+
+//   return (
+//     <div>
+//       {title}
+//       <DescriptionWithLink description={props.description} link={props.link} />
+//       <GrayIMG img_url={props.img_url} grayScale={props.grayScale} />
+//     </div>
+//   );
+// };
+
+// export default Planet;
+
+// Exercício state lifecycle
+export default class Planet extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      satellites: [],
+    };
+  }
+
+  createTitle() {
+    let title;
+    if (props.title_with_underline)
+      title = (
+        <h1>
+          <u>{props.name}</u>
+        </h1>
+      );
+    else title = <h1>{props.name}</h1>;
+  }
+
+  render() {
+    return (
+      <div>
+        {this.createTitle()}
+        <DescriptionWithLink
+          description={props.description}
+          link={props.link}
+        />
+        <GrayIMG img_url={props.img_url} grayScale={props.grayScale} />
+      </div>
     );
-  else title = <h1>{props.name}</h1>;
-
-  return (
-    <div>
-      {title}
-      <DescriptionWithLink description={props.description} link={props.link} />
-      <GrayIMG img_url={props.img_url} grayScale={props.grayScale} />
-    </div>
-  );
-};
-
-export default Planet;
+  }
+}

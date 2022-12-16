@@ -38,31 +38,53 @@ import Planet from "./planet";
 //   );
 // };
 
+// Aula lifecycle
+async function getPlanets() {
+  let response = await fetch("http://localhost:3000/api/planets.json");
+  let data = await response.json();
+  return data;
+}
+
 // Classes com estado
 class Planets extends React.Component {
   constructor(props) {
     super(props);
 
+    // Aula estados
+    //   this.state = {
+    //     planets: [
+    //       {
+    //         name: "Mercúrio",
+    //         description:
+    //           "Mercúrio é um planeta do sistema solar, que pertence à Via Láctea.",
+    //         link: "https://pt.wikipedia.org/wiki/Merc%C3%BArio_(planeta)",
+    //         img_url:
+    //           "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/280px-Mercury_in_color_-_Prockter07-edit1.jpg",
+    //       },
+    //       {
+    //         name: "Plutão",
+    //         description:
+    //           "Plutão é um planeta anão do sistema solar, que pertence à Via Láctea.",
+    //         link: "https://pt.wikipedia.org/wiki/Plut%C3%A3o",
+    //         img_url:
+    //           "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pluto_in_True_Color_-_High-Res.jpg/280px-Pluto_in_True_Color_-_High-Res.jpg",
+    //       },
+    //     ],
+    //   };
+    // }
+
+    // Aula lifecycle
     this.state = {
-      planets: [
-        {
-          name: "Mercúrio",
-          description:
-            "Mercúrio é um planeta do sistema solar, que pertence à Via Láctea.",
-          link: "https://pt.wikipedia.org/wiki/Merc%C3%BArio_(planeta)",
-          img_url:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/280px-Mercury_in_color_-_Prockter07-edit1.jpg",
-        },
-        {
-          name: "Plutão",
-          description:
-            "Plutão é um planeta anão do sistema solar, que pertence à Via Láctea.",
-          link: "https://pt.wikipedia.org/wiki/Plut%C3%A3o",
-          img_url:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pluto_in_True_Color_-_High-Res.jpg/280px-Pluto_in_True_Color_-_High-Res.jpg",
-        },
-      ],
+      planets: [],
     };
+  }
+
+  componentDidMount() {
+    getPlanets().then((data) => {
+      this.setState((state) => ({
+        planets: data["planets"],
+      }));
+    });
   }
 
   removeLast = () => {
