@@ -1,5 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import Planet from "./planet";
+import Form from "./form";
 
 // const showMessage = () => {
 //   console.log("Hello Event!");
@@ -139,6 +140,58 @@ import Planet from "./planet";
 
 // export default Planets;
 
+//Refatorando state e lifecycle com hooks
+// async function getPlanets() {
+//   let response = await fetch("http://localhost:3000/api/planets.json");
+//   let data = await response.json();
+//   return data;
+// }
+
+// const Planets = () => {
+//   const [planets, setPlanets] = useState([]);
+
+//   useEffect(() => {
+//     getPlanets().then((data) => {
+//       setPlanets(data["planets"]);
+//     });
+//   }, []); // As chaves servem para indicar que o useEffect só deve
+//   // renderizar no inicio, na montagem. Se quiser re-renderizar sempre
+//   // não deve-se passar este parâmetro vazio
+
+//   const removeLast = () => {
+//     let new_planets = [...planets];
+//     new_planets.pop();
+//     setPlanets(new_planets);
+//   };
+
+//   const duplicateLastPlanet = () => {
+//     let last_planet = planets[planets.length - 1];
+//     setPlanets([...planets, last_planet]);
+//   };
+
+//   return (
+//     <Fragment>
+//       <h1>Planet List</h1>
+//       <button onClick={removeLast}>Remove last</button>
+//       <button onClick={duplicateLastPlanet}>Duplicate last</button>
+//       <hr />
+//       {planets.map((planet, i) => (
+//         <Planet
+//           key={i}
+//           id={planet.id}
+//           name={planet.name}
+//           description={planet.description}
+//           link={planet.link}
+//           img_url={planet.img_url}
+//         />
+//       ))}
+//     </Fragment>
+//   );
+// };
+
+// export default Planets;
+
+//Criando um form controlado
 async function getPlanets() {
   let response = await fetch("http://localhost:3000/api/planets.json");
   let data = await response.json();
@@ -152,26 +205,17 @@ const Planets = () => {
     getPlanets().then((data) => {
       setPlanets(data["planets"]);
     });
-  }, []); // As chaves servem para indicar que o useEffect só deve
-  // renderizar no inicio, na montagem. Se quiser re-renderizar sempre
-  // não deve-se passar este parâmetro vazio
+  }, []);
 
-  const removeLast = () => {
-    let new_planets = [...planets];
-    new_planets.pop();
-    setPlanets(new_planets);
-  };
-
-  const duplicateLastPlanet = () => {
-    let last_planet = planets[planets.length - 1];
-    setPlanets([...planets, last_planet]);
+  const addPlanet = (newPlanet) => {
+    setPlanets([...planets, newPlanet]);
   };
 
   return (
     <Fragment>
       <h1>Planet List</h1>
-      <button onClick={removeLast}>Remove last</button>
-      <button onClick={duplicateLastPlanet}>Duplicate last</button>
+      <hr />
+      <Form addPlanet={addPlanet} />
       <hr />
       {planets.map((planet, i) => (
         <Planet
