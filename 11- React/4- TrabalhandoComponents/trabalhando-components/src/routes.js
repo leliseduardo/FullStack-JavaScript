@@ -1,18 +1,25 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PlanetsScreen from "./screens/planets";
+import TelaExemploScreen from "./screens/exemplo";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <PlanetsScreen />,
   },
+  {
+    path: "/exemplo",
+    element: <TelaExemploScreen />,
+  },
 ]);
 
 const Routes = () => (
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <Fragment>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+  </Fragment>
 );
 
 export default Routes;
