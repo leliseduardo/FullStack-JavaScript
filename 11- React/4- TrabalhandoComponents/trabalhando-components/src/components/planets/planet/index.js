@@ -1,6 +1,7 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import GrayIMG from "../../shared/gray-img";
 import DescriptionWithLink from "../../shared/description-with-link";
+import Planets from "..";
 
 // Aula eventos como parâmetros
 // const Planet = (props) => {
@@ -69,55 +70,46 @@ import DescriptionWithLink from "../../shared/description-with-link";
 
 // Exercício state lifecycle
 
-export default class Planet extends React.Component {
-  constructor(props) {
-    super(props);
+//
 
-    this.state = {
-      id: props.id,
-      name: props.name,
-      description: props.description,
-      link: props.link,
-      img_url: props.img_url,
-      satellites: [],
-    };
-  }
+// Exercício refatoração de state e lifestyle com hooks
 
-  async getSatellites() {
+const Planet = (props) => {
+  async function getSatellites() {
     let response = await fetch(
-      "http://localhost:3000/api/" + this.state.id + ".json"
+      "http://localhost:3000/api/" + props.id + ".json"
     );
     let data = await response.json();
     return data;
   }
 
-  componentDidMount() {
-    this.getSatellites().then((data) => {
-      this.setState((state) => ({
-        satellites: data["satellites"],
-      }));
-    });
-  }
+  const [satellites, setSatellites] = useState([]);
 
-  render() {
-    return (
-      <div>
-        <h2>{this.state.name}</h2>
-        <DescriptionWithLink
-          description={this.state.description}
-          link={this.state.link}
-        />
-        <GrayIMG
-          img_url={this.state.img_url}
-          grayScale={this.state.grayScale}
-        />
-        <h3>Satélites do planeta: </h3>
-        <ul>
-          {this.state.satellites.map((satellite, i) => {
-            return <li key={i}>{satellite.name}</li>;
-          })}
-        </ul>
-      </div>
-    );
-  }
-}
+  useEffect(() => {
+    getSatellites().then((data) => {
+      setSatellites(data["satellites"]);
+    });
+  }, []);
+
+  // id: props.id,
+  //     name: props.name,
+  //     description: props.description,
+  //     link: props.link,
+  //     img_url: props.img_url,
+
+  return (
+    <div>
+      <h2>{props.name}</h2>
+      <DescriptionWithLink description={props.description} link={props.link} />
+      <GrayIMG img_url={props.img_url} />
+      <h3>Satélites do planeta: </h3>
+      <ul>
+        {satellites.map((satellite, i) => {
+          return <li key={i}>{satellite.name}</li>;
+        })}
+      </ul>
+    </div>
+  );
+};
+
+export default Planet;
