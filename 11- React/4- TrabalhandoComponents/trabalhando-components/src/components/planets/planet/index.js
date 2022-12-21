@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import GrayIMG from "../../shared/gray-img";
 import DescriptionWithLink from "../../shared/description-with-link";
 import Planets from "..";
+import Form from "./form";
 
 // Aula eventos como parâmetros
 // const Planet = (props) => {
@@ -73,6 +74,39 @@ import Planets from "..";
 //
 
 // Exercício refatoração de state e lifestyle com hooks
+// const Planet = (props) => {
+//   async function getSatellites() {
+//     let response = await fetch(
+//       "http://localhost:3000/api/" + props.id + ".json"
+//     );
+//     let data = await response.json();
+//     return data;
+//   }
+
+//   const [satellites, setSatellites] = useState([]);
+
+//   useEffect(() => {
+//     getSatellites().then((data) => {
+//       setSatellites(data["satellites"]);
+//     });
+//   }, []);
+
+//   return (
+//     <div>
+//       <h2>{props.name}</h2>
+//       <DescriptionWithLink description={props.description} link={props.link} />
+//       <GrayIMG img_url={props.img_url} />
+//       <h3>Satélites do planeta: </h3>
+//       <ul>
+//         {satellites.map((satellite, i) => {
+//           return <li key={i}>{satellite.name}</li>;
+//         })}
+//       </ul>
+//     </div>
+//   );
+// };
+
+// export default Planet;
 
 const Planet = (props) => {
   async function getSatellites() {
@@ -91,17 +125,18 @@ const Planet = (props) => {
     });
   }, []);
 
-  // id: props.id,
-  //     name: props.name,
-  //     description: props.description,
-  //     link: props.link,
-  //     img_url: props.img_url,
+  const addSatellites = (newSatellite) => {
+    setSatellites([...satellites, newSatellite]);
+  };
 
   return (
     <div>
       <h2>{props.name}</h2>
       <DescriptionWithLink description={props.description} link={props.link} />
       <GrayIMG img_url={props.img_url} />
+      <h3>Adicionar satélites:</h3>
+      <hr />
+      <Form addSatellite={addSatellites} />
       <h3>Satélites do planeta: </h3>
       <ul>
         {satellites.map((satellite, i) => {
