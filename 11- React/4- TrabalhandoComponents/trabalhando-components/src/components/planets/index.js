@@ -192,6 +192,50 @@ import Form from "./form";
 // export default Planets;
 
 //Criando um form controlado
+// async function getPlanets() {
+//   let response = await fetch("http://localhost:3000/api/planets.json");
+//   let data = await response.json();
+//   return data;
+// }
+
+// const Planets = () => {
+//   const [planets, setPlanets] = useState([]);
+
+//   useEffect(() => {
+//     getPlanets().then((data) => {
+//       setPlanets(data["planets"]);
+//     });
+//   }, []);
+
+//   const addPlanet = (newPlanet) => {
+//     setPlanets([...planets, newPlanet]);
+//   };
+
+//   return (
+//     <Fragment>
+//       <h1>Planet List</h1>
+//       <hr />
+//       <Form addPlanet={addPlanet} />
+//       <hr />
+//       {planets.map((planet, i) => (
+//         <Planet
+//           key={i}
+//           id={planet.id}
+//           name={planet.name}
+//           description={planet.description}
+//           link={planet.link}
+//           img_url={planet.img_url}
+//         />
+//       ))}
+//     </Fragment>
+//   );
+// };
+
+// export default Planets;
+
+// Navegando entre telas
+import { Link } from "react-router-dom";
+
 async function getPlanets() {
   let response = await fetch("http://localhost:3000/api/planets.json");
   let data = await response.json();
@@ -214,6 +258,17 @@ const Planets = () => {
   return (
     <Fragment>
       <h1>Planet List</h1>
+      <label>
+        <Link to={`/exemplo`}>Página de exemplo</Link>
+      </label>
+      <label> | </label>
+      <label>
+        <Link to={`/teste`}>Página de teste</Link>
+      </label>
+      <label> | </label>
+      <label>
+        <Link to={`/welcome`}>Página de boas vindas</Link>
+      </label>
       <hr />
       <Form addPlanet={addPlanet} />
       <hr />
