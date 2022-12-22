@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PlanetsScreen from "./screens/planets";
 import TelaExemploScreen from "./screens/exemplo";
+import NotFound from "./screens/notFound";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
   {
     path: "/:id",
     element: <TelaExemploScreen />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 

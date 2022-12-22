@@ -234,7 +234,7 @@ import Form from "./form";
 // export default Planets;
 
 // Navegando entre telas
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 
 async function getPlanets() {
   let response = await fetch("http://localhost:3000/api/planets.json");
@@ -244,11 +244,17 @@ async function getPlanets() {
 
 const Planets = () => {
   const [planets, setPlanets] = useState([]);
+  const [redirection, setRedirection] = useState([]);
 
   useEffect(() => {
-    getPlanets().then((data) => {
-      setPlanets(data["planets"]);
-    });
+    getPlanets().then(
+      (data) => {
+        setPlanets(data["planets"]);
+      },
+      (error) => {
+        return redirect("/erro");
+      }
+    );
   }, []);
 
   const addPlanet = (newPlanet) => {
