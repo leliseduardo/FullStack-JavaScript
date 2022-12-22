@@ -9,7 +9,7 @@ const router = createBrowserRouter([
     element: <PlanetsScreen />,
   },
   {
-    path: "/exemplo",
+    path: "/:id",
     element: <TelaExemploScreen />,
   },
 ]);
