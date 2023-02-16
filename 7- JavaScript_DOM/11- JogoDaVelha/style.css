@@ -17,7 +17,7 @@
 /* Estruturação e configuração básica */
 .container {
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   background-color: var(--bg-color);
   color: var(--primary-color);
   display: flex;
@@ -26,11 +26,13 @@
 }
 
 .main {
-  width: 900px;
-  height: 750px;
+  width: 90vw;
+  height: 50vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 40vh;
+  margin-top: -18vh;
 }
 
 /* Cabeçalho */
@@ -125,30 +127,31 @@
 /* Status do jogo */
 .status {
   width: 100%;
-  height: 50px;
+  height: 1vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 15vh;
 }
 
 /* Área do jogo */
 .game-area {
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .btn-area {
-  width: 610px;
-  height: 460px;
+  width: 54vw;
+  height: 60vh;
   display: flex;
   flex-wrap: wrap;
 }
 
 .btn-game {
-  width: 200px;
+  width: 18vw;
   height: auto;
   background-color: var(--bg-color);
   color: transparent;
