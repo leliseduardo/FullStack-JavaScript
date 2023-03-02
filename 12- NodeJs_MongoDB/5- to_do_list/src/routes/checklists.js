@@ -20,4 +20,16 @@ router.get("/:id", (req, res) => {
   res.send(`Id: ${req.params.id}`);
 });
 
+// Rotas com PUT
+router.put("/:id", (req, res) => {
+  console.log(req.body);
+  res.send(`Put Id: ${req.params.id}`);
+});
+
+// Rota com requisição DELETE
+router.delete("/:id", (req, res) => {
+  console.log(req.body);
+  res.send(`Delete Id: ${req.params.id}`);
+});
+
 module.exports = router;
