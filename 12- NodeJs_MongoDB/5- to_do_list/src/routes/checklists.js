@@ -5,9 +5,13 @@ const router = express.Router();
 const Checklist = require("../models/checklist");
 
 // Rota com requisição GET
-router.get("/", (req, res) => {
-  console.log("Olá");
-  res.send();
+router.get("/", async (req, res) => {
+  try {
+    let checklist = await Checklist.find({});
+    res.status(200).json(checklist);
+  } catch (error) {
+    res.status(500).json(error);
+  }
 });
 
 // Rota com requisição POST
@@ -23,9 +27,13 @@ router.post("/", async (req, res) => {
 });
 
 // Rotas com parâmetro
-router.get("/:id", (req, res) => {
-  console.log(req.params.id);
-  res.send(`Id: ${req.params.id}`);
+router.get("/:id", async (req, res) => {
+  try {
+    let checklist = await Checklist.findById(req.params.id);
+    res.status(200).json(checklist);
+  } catch (error) {
+    res.status(422).json(error);
+  }
 });
 
 // Rotas com PUT
