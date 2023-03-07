@@ -13,6 +13,13 @@ router.get("/", (req, res) => {
 // Rota com requisição POST
 router.post("/", async (req, res) => {
   let { name } = req.body;
+
+  try {
+    let checklist = await Checklist.create({ name });
+    res.status(200).json(checklist);
+  } catch (error) {
+    res.status(422).json(error);
+  }
 });
 
 // Rotas com parâmetro
