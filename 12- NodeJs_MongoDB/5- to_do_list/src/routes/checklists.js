@@ -70,10 +70,10 @@ router.get("/:id", async (req, res) => {
 // Rotas com PUT
 router.put("/:id", async (req, res) => {
   let { name } = req.body.checklist;
-  let checklist = await Checklist.findById(req.params.id);
 
   try {
-    await checklist.update({ name });
+    // await checklist.update({ name }); // Não funciona
+    await Checklist.findByIdAndUpdate(req.params.id, { name });
     res.redirect("/checklists");
   } catch (error) {
     let errors = error.errors;
