@@ -1,10 +1,16 @@
 const express = require("express");
 const checkListRouter = require("./src/routes/checklists");
+const rootRouter = require("./src/routes/index");
 require("./config/database");
+const path = require("path");
 
 const app = express();
 app.use(express.json());
 
+app.set("views", path.join(__dirname, "src/views")); // Seta caminho para view
+app.set("view engine", "ejs"); // Seta renderizador como ejs
+
+app.use("/", rootRouter);
 app.use("/checklists", checkListRouter);
 
 app.listen(3000, () => {
