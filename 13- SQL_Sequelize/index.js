@@ -17,11 +17,17 @@
   // });
 
   // Atualizando
-  const updatePlanets = await Planet.findByPk(4);
-  updatePlanets.name = "Jupter";
-  await updatePlanets.save();
+  // const updatePlanets = await Planet.findByPk(4);
+  // updatePlanets.name = "Jupiter";
+  // await updatePlanets.save();
+
+  // Removendo
+  const deletePlanets = await Planet.findByPk(2);
+  console.log(deletePlanets);
+  await deletePlanets.destroy();
 
   // console.log(newPlanet);
   // console.log(seePlanets);
-  console.log(updatePlanets);
+  // console.log(updatePlanets);
+  console.log(deletePlanets);
 })();
