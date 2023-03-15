@@ -15,4 +15,18 @@ module.exports = {
     const satelite = await Satelite.create({ name, serial_number, planetId });
     return res.json(satelite);
   },
+
+  async index(req, res) {
+    const { planetId } = await req.params;
+
+    if (!planetId) {
+      res.send("Esse planeta não existe!");
+    }
+
+    const planet = await Planet.findByPk(planetId, {
+      include: Satelite,
+    });
+
+    return res.json(planet);
+  },
 };
