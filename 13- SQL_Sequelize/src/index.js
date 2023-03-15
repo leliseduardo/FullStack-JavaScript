@@ -1,6 +1,6 @@
 // Aulas de API
 const express = require("express");
-const routes = require("./src/routes");
+const routes = require("./routes");
 
 const app = express();
 
