@@ -35,7 +35,7 @@ const spaceship = {
 
 const pilot = "Han Solo";
 
-spaceship.name = "Millenium Falcon";
+spaceship.name = "Millennium Falcon";
 
 setPilot(pilot, spaceship);
 accelerate(50, spaceship);
