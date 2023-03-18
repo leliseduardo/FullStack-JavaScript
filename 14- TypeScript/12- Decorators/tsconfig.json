@@ -2,6 +2,7 @@
   "compilerOptions": {
     "outDir": "public/dist",
     "target": "ESNEXT",
-    "watch": true
+    "watch": true,
+    "experimentalDecorators": true
   }
 }
